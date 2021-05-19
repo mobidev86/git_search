@@ -23,5 +23,8 @@ module.exports = {
     'react/prop-types': 'off',
     'import/prefer-default-export': 'off',
     'react/destructuring-assignment': 'off',
+    'react/no-array-index-key': 'off',
+    'no-unused-vars': 'off',
+    'no-console': 'off',
   },
 };

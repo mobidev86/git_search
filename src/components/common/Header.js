@@ -51,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header(props) {
   const classes = useStyles();
-  const onSubjectChange = (text) => {
-    props.setSubject(text);
+  const onSubjectChange = (ev) => {
+    props.setSubject(ev);
   };
   return (
     <div className={classes.grow}>
@@ -66,14 +66,13 @@ export default function Header(props) {
               <SearchIcon />
             </div>
             <InputBase
-              value={props.subject}
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
-              onChange={(ev) => onSubjectChange(ev.target.value)}
+              onChange={onSubjectChange}
             />
           </div>
         </Toolbar>

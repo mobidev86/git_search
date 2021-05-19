@@ -32,8 +32,6 @@ const store = createStore(createReducer(), persistedState, enhancer);
 // eslint-disable-next-line no-use-before-define
 store.subscribe(() => saveToLocalStorage(store.getState()));
 
-store.asyncReducers = {};
-
 export const saveToLocalStorage = (state) => {
   try {
     const serializedState = JSON.stringify(state);

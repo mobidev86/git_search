@@ -3,7 +3,7 @@ import * as Actions from '../actions/actionTypes';
 const initialState = {
   data: [],
 };
-function MessageBarReducer(state = initialState, action) {
+function generalReducer(state = initialState, action) {
   switch (action.type) {
     case Actions.FETCH_REPOS:
       return {
@@ -15,4 +15,4 @@ function MessageBarReducer(state = initialState, action) {
       return state;
   }
 }
-export default MessageBarReducer;
+export default generalReducer;
